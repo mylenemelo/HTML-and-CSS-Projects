@@ -1,6 +1,6 @@
 # HTML and CSS Projects
 
-This repository contains my HTML and CSS projects for the Version Control course at Durham College.
+This repository contains my HTML and CSS projects for the Version Control course.
 
 Each project will show what I learned about:
 - HTML structure and tags

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Function Example</title>
+    <script>
+        // Step 2: Create a function
+        function showText() {
+            // Get the paragraph element by its ID
+            var paragraph = document.getElementById("Irish");
+            
+            // Change its text content
+            paragraph.innerHTML = "The text has changed!";
+            
+            // Change its text color
+            paragraph.style.color = "blue";
+        }
+    </script>
+</head>
+<body>
+    <h1>Function Example</h1>
+    
+    <!-- Paragraph with an ID -->
+    <p id="Irish">Hello, I am Mylene!</p>
+    
+    <!-- Button that calls the function when clicked -->
+    <button onclick="showText()">Click Me!</button>
+</body>
+</html>
