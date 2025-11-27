@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bootstrap Movie Project</title>
+
+  <!-- Bootstrap 4.1.3 CSS -->
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+  />
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#17a2b8;">
+    <div class="container">
+      <a class="navbar-brand" href="#">Movie Theater</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Showtimes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Deals</a>
+          </li>
+        </ul>
+
+        <form class="form-inline">
+          <input
+            class="form-control mr-sm-2"
+            type="search"
+            placeholder="Search"
+          />
+          <button class="btn btn-primary my-2 my-sm-0" type="submit">
+            Search
+          </button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SHOWTIMES SECTION -->
+  <div class="container mt-5">
+    <h3 class="mb-4">Showtimes:</h3>
+
+    <div class="row">
+      <!-- CARD 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img
+            <img src="https://image.tmdb.org/t/p/w500/r2517Vz9EhDhj88qwbDVj8DCRZN.jpg" class="card-img-top" alt="Kong Skull Island">
+            
+          <div class="card-body">
+            <h5 class="card-title">Kong Skull Island</h5>
+            <p class="card-text">
+              A team of scientists explore an uncharted island ruled by the mighty Kong.
+            </p>
+            <span class="badge badge-info">1:00pm</span>
+            <span class="badge badge-info">3:00pm</span>
+            <span class="badge badge-info">5:30pm</span>
+            <span class="badge badge-info">7:00pm</span>
+            <span class="badge badge-info">9:30pm</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img
+            <img src="https://image.tmdb.org/t/p/w500/myRzRzCxdfUWjkJWgpHHZ1oGkJd.jpg" class="card-img-top" alt="Ghost in the Shell">
+            
+          <div class="card-body">
+            <h5 class="card-title">Ghost in the Shell</h5>
+            <p class="card-text">
+              A cyber-enhanced soldier leads the fight against dangerous criminals.
+            </p>
+            <span class="badge badge-info">1:00pm</span>
+            <span class="badge badge-info">3:00pm</span>
+            <span class="badge badge-info">5:30pm</span>
+            <span class="badge badge-info">7:00pm</span>
+            <span class="badge badge-info">9:30pm</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img
+           <img src="https://image.tmdb.org/t/p/w500/tWqifoYuwLETmmasnGHO7xBjEtt.jpg" class="card-img-top" alt="Beauty and the Beast">
+           
+          <div class="card-body">
+            <h5 class="card-title">Beauty and the Beast</h5>
+            <p class="card-text">
+              A cursed prince must learn to love before time runs out.
+            </p>
+            <span class="badge badge-info">1:00pm</span>
+            <span class="badge badge-info">3:00pm</span>
+            <span class="badge badge-info">5:30pm</span>
+            <span class="badge badge-info">7:00pm</span>
+            <span class="badge badge-info">9:30pm</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 4.1.3 Scripts -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</body>
+</html>
