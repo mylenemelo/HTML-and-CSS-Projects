@@ -4,6 +4,90 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My One-Page Pet Website</title>
+  <style>
+    /* Flexbox container to align images side by side */
+    .row {
+        display: flex;
+        justify-content: space-between; /* Add spacing between the images */
+        gap: 10px; /* Optional: Adjust the gap between images */
+    }
+
+    .column {
+        flex: 0 0 48%;  /* Take up 48% of the space for 2 images */
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px; /* Optional: Adds rounded corners */
+    }
+
+    /* Hover effect for images */
+    img.hover-shadow {
+        transition: 0.3s;
+    }
+
+    img.hover-shadow:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Lightbox (Modal) styles */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .modal-content {
+        position: relative;
+        margin: auto;
+        width: 90%;
+        max-width: 800px;
+    }
+
+    .mySlides {
+        display: none;
+    }
+
+    .close {
+        color: white;
+        font-size: 35px;
+        position: absolute;
+        top: 15px;
+        right: 25px;
+        cursor: pointer;
+    }
+
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        color: white;
+        font-size: 30px;
+        padding: 16px;
+    }
+
+    .next {
+        right: 0;
+    }
+
+    .caption-container {
+        text-align: center;
+        background-color: #333;
+        color: white;
+        padding: 10px;
+    }
+
+    .column {
+        width: 48%;
+    }
+  </style>
 </head>
 <body>
 
@@ -24,35 +108,70 @@
   <!-- Gallery Section -->
   <section id="gallery">
     <h2>Gallery</h2>
-    <img src="dog.jpg" alt="My Dog" width="300">
-    <img src="hamster.jpg" alt="My Hamster" width="300">
+    <div class="row">
+      <div class="column">
+        <img src="Images/dog wide.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow" alt="My Dog">
+      </div>
+      <div class="column">
+       <img src="Images/cat wide.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow" alt="My Cat">
+      </div>
+    </div>
   </section>
 
-  <!-- Video Section -->
-  <section id="video">
-  <h2>Dog Video</h2>
-  <p>Click the link below to watch the video on YouTube:</p>
-  <a href="https://www.youtube.com/watch?v=-SY-aeSplco" target="_blank">Watch Dog Video</a>
-</section>
+  <!-- Modal for Lightbox -->
+  <div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+        <!-- First Image: Dog (full size) -->
+        <div class="mySlides">
+            <div class="numbertext">1 / 2</div>
+            <img src="Images/dog wide.jpg" style="width:100%">
+        </div>
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <form>
-      <label for="name">Name:</label><br>
-      <input type="text" id="name" name="name" required><br><br>
+        <!-- Second Image: Cat (full size) -->
+        <div class="mySlides">
+            <div class="numbertext">2 / 2</div>
+            <img src="Images/cat wide.jpg" style="width:100%">
+        </div>
 
-      <label for="email">Email:</label><br>
-      <input type="email" id="email" name="email" required><br><br>
+        <!-- Navigation -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
-      <input type="submit" value="Send">
-    </form>
-  </section>
+        <!-- Caption Text -->
+        <div class="caption-container">
+            <p id="caption"></p>
+        </div>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 My Pet Website</p>
-  </footer>
+        <!-- Thumbnail Image Controls -->
+        <div class="column">
+            <img class="demo" src="Images/dog wide.jpg" onclick="currentSlide(1)" alt="My Dog">
+        </div>
+        <div class="column">
+            <img class="demo" src="Images/cat wide.jpg" onclick="currentSlide(2)" alt="My Cat">
+        </div>
+    </div>
+  </div>
+<!-- Video Section --> 
+ <section id="video"> 
+  <h2>Dog Video</h2> 
+  <p>Click the link below to watch the video on YouTube:</p> 
+  <a href="https://www.youtube.com/watch?v=-SY-aeSplco" target="_blank">Watch Dog Video</a> 
+</section> 
+<!-- Contact Section --> 
+ <section id="contact">
+   <h2>Contact Me</h2> <form>
+     <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name" required><br>
+      <br> <label for="email">Email:</label><br> 
+      <input type="email" id="email" name="email" required><br><br> 
+      <input type="submit" value="Send"> </form> 
+    </section> 
+    <!-- Footer --> 
+     <footer> 
+      <p>&copy; 2025 My Pet Website</p> 
+    </footer>
+  <script src="JS/one_page_website.js"></script>
 
 </body>
 </html>
